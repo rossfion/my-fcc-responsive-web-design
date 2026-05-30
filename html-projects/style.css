@@ -1,0 +1,78 @@
+/* General Styles */
+
+* {
+    margin: 0 auto;
+    padding: 0 auto;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    background: url(project-3.jpg) no-repeat center center/cover; 
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.top-separator {
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+.accordion {
+    height: 100vh;
+    width: 65%;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 3px;
+    overflow:auto;
+}
+
+.accordion .accordion-title {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.accordion .content-container .project-title {
+    padding: 18px 0px;
+    font-size: 22px;
+    cursor: pointer;
+    border-bottom: 1px solid #000;
+
+    position: relative;
+}
+
+.accordion .content-container .project-title::after {
+    content: '+';
+
+    position: absolute;
+    right: -5px;
+}
+
+.accordion .content-container .project-details {
+    padding-top: 15px;
+    font-size: 22px;
+    line-height: 1.5;
+    width: 100%;
+    height: 0px;
+    overflow: hidden; 
+    transition: .5s;
+
+}
+
+/* Javascript Styling Link */
+
+.accordion .content-container.active .project-details {
+    height: 150px;
+}
+
+.accordion .content-container.active .project-title {
+    font-size: 18px;
+    transition: .5s;
+}
+
+.accordion .content-container.active .project-title::after {
+    content: '-';
+    font-size: 30px;
+    transition: .5s;
+}

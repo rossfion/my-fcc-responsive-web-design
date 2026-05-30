@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Canvas Demo Example with JavaScript Animation</title>
+    <style>
+        canvas{
+            border: #666 1px solid;
+        }
+    </style>
+    <script>
+        // execute draw features when the DOM is ready
+        window.onload = draw;
+        function draw(x,y){
+            // assign our canvas element to a variable
+            const canvas = document.getElementById("canvas1");
+            // create the HTML5 context object to enable draw methods
+            const ctx = canvas.getContext("2d");
+            // save the canvase state if required
+            ctx.save();
+            //clears rectangle for redrawing
+            ctx.clearRect(0,0,550,440);
+            //fillStyle(r,g,b,alpha); green box
+            ctx.fillStyle = "rgba(0,200,0,1)";
+            //fillRect (X,Y, width, height); drae rectangle
+            ctx.fillRect(x,y,50,50);
+            // restore the canvase state if saved
+            ctx.restore();
+            x += 1; // increment the position by some numeric value
+            const loopTime = setTimeout('draw('+x+', '+y+')',30);
+
+        }
+    </script>
+</head>
+<body>
+    <button onclick="draw(0,0)">Draw</button>
+    <canvas id="canvas1" width="550" height="400"></canvas>
+</body>
+</html>
