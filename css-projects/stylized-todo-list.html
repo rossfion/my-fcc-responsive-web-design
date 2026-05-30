@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylized ToDo List</title>
+    <style>
+        a {
+            text-decoration: none;
+        }
+
+        a .sub-item-link:link {
+            color: #003373;
+        }
+
+        a.sub-item-link:visited {
+            color: purple;
+        }
+
+        a.sub-item-link:focus {
+            border: 1px solid darkgreen;
+        }
+
+        a.sub-item-link:hover {
+            color: brown;
+        }
+
+        a.sub-item-link:active {
+            color: lightblue;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="todo-list">
+        <li>
+            <input type="checkbox" id="practice-css">
+            <label for="practice-css">Practice CSS</label>
+            <ul class="sub-item">
+                <li><a class="sub-item-link" href="https://www.freecodecamp.org" target="_blank">freeCodeCamp link</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <input type="checkbox" id="grocery-shopping">
+            <label for="grocery-shopping">Do the grocery shopping</label>
+            <ul class="sub-item">
+                <li><a class="sub-item-link" href="https://www.aldi.com" target="_blank">Link to Aldi store</a></li>
+            </ul>
+        </li>
+        <li>
+            <input type="checkbox" id="job-search">
+            <label for="job-search">Search for work</label>
+            <ul class="sub-item">
+                <li><a class="sub-item-link" href="https://www.indeed.com" target="_blank">Indeed link</a></li>
+            </ul>
+        </li>
+        <li>
+            <input type="checkbox" id="improve-linkedin-profile">
+            <label for="improve-linkedin-profile">Improve LinkedIn profile</label>
+            <ul class="sub-item">
+                <li><a class="sub-item-link" href="https://www.linkedin.com" target="_blank">Link to LinkedIn
+                        profile</a></li>
+            </ul>
+        </li>
+    </ul>
+</body>
+
+</html>

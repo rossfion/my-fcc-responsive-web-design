@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newspaper Layout</title>
+    <style>
+        .newspaper-layout {
+            display: grid;
+            grid-template-areas:
+                'title title title'
+                'feature-article feature-article cover-image'
+                'secondary-article secondary-article cover-image'
+                'small-article1 small-article2 small-article3';
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto 1fr 1fr 1fr;
+            grid-gap: 10px;
+        }
+
+        .title {
+            grid-area: title;
+        }
+
+        .feature-article {
+            grid-area: feature-article;
+        }
+
+        .cover-image {
+            grid-area: cover-image;
+        }
+
+        .secondary-article {
+            grid-area: secondary-article;
+        }
+
+        .small-article1 {
+            grid-area: small-article1;
+        }
+
+        .small-article2 {
+            grid-area: small-article2;
+        }
+
+        .small-article3 {
+            grid-area: small-article3;
+        }
+
+        .cover-image img {
+            max-width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="title">
+        <h1>The Daily Gossip</h1>
+    </header>
+    <article class="feature-article">
+        <h2>Article title goes here</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae mauris nec massa dapibus bibendum a
+            eget enim. In volutpat metus non erat vulputate posuere. Fusce sollicitudin, est non lacinia iaculis, nunc
+            tortor aliquam erat, nec finibus ligula diam at arcu. Morbi pulvinar lorem vel pretium luctus. Maecenas
+            turpis risus, vehicula ac libero a, laoreet cursus arcu. Donec placerat vulputate urna, et fermentum enim
+            lacinia et. Aliquam venenatis placerat viverra. Interdum et malesuada fames ac ante ipsum primis in
+            faucibus. Nulla euismod sit amet est ut imperdiet. Sed mattis elementum porttitor. Integer dui leo,
+            hendrerit id tempus aliquam, fringilla ac erat. Aliquam a aliquet ligula. Proin accumsan ante quis purus
+            malesuada, at aliquet nunc congue. In facilisis aliquam efficitur.
+        </p>
+    </article>
+    <article class="small-article1">
+        <h3>Small article one</h3>
+        <p>Sed quaerat quo magnam aspernatur numquam. Mollitia non mollitia eaque dolores a occaecati suscipit. Officiis
+            veritatis sequi ut provident et magnam. Ab architecto dolor fugiat reiciendis repellat rerum. Nulla quis
+            rerum tenetur.
+        </p>
+    </article>
+    <article class="small-article2">
+        <h3>Small article two</h3>
+        <p>Sed quaerat quo magnam aspernatur numquam. Mollitia non mollitia eaque dolores a occaecati suscipit. Officiis
+            veritatis sequi ut provident et magnam. Ab architecto dolor fugiat reiciendis repellat rerum. Nulla quis
+            rerum tenetur.
+        </p>
+    </article>
+    <article class="small-article3">
+        <h3>Small article three</h3>
+        <p>Sed quaerat quo magnam aspernatur numquam. Mollitia non mollitia eaque dolores a occaecati suscipit. Officiis
+            veritatis sequi ut provident et magnam. Ab architecto dolor fugiat reiciendis repellat rerum. Nulla quis
+            rerum tenetur.
+        </p>
+    </article>
+    <article class="secondary-article">
+        <h2>Secondary Article</h2>
+        <p>Sed quaerat quo magnam aspernatur numquam. Mollitia non mollitia eaque dolores a occaecati suscipit. </p>
+    </article>
+    <figure class="cover-image"><img /></figure>
+    </main>
+</body>
+
+</html>

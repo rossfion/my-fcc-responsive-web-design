@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Inventory App</title>
+    <style>
+        tr[class="read"] {
+            background-image: linear-gradient(to bottom, #dfdfe2 1.845rem, white 1.845rem);
+        }
+
+        tr[class="to-read"] {
+            background-image: linear-gradient(to right, #dfdfe2 1.845rem, white 1.845rem);
+        }
+
+        tr[class="in-progress"] {
+            background-image: linear-gradient(to top, #dfdfe2 1.845rem, white 1.845rem);
+        }
+
+        span {
+            display: inline-block;
+        }
+
+        tr[class="to-read"] span[class="status"] {
+            border: 1px solid orangered;
+            border-radius: 25px;
+            background-image: linear-gradient(to right, hotpink, orangered);
+        }
+
+        tr[class="read"] span[class="status"] {
+            border: 1px solid orangered;
+            border-radius: 25px;
+            background-image: linear-gradient(to right, lightblue, lightgreen);
+        }
+
+        tr[class="in-progress"] span[class="status"] {
+            border: 1px solid orangered;
+            border-radius: 25px;
+            background-image: linear-gradient(to right, orangered, orange);
+        }
+
+        span[class^="rate"],
+        span[class="status"] {
+            height: 25px;
+            width: 100px;
+            padding: 2px;
+        }
+
+        span[class^="rate"]>span {
+            border: 1px solid gold;
+            border-radius: 50%;
+            height: 20px;
+            width: 20px;
+            margin: 2px;
+            background-color: orangered;
+        }
+
+        span[class~="one"]> :nth-child(1) {
+            background-image: linear-gradient(to right, yellow, green);
+        }
+
+        span[class~="two"]> :nth-child(2),
+        span[class~="two"]> :nth-child(1) {
+            background-image: linear-gradient(to right, yellow, green);
+        }
+
+        span[class~="three"]>span {
+            background-image: linear-gradient(to right, yellow, green);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Book Inventory</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Category</th>
+                <th>Status</th>
+                <th>Rate</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="read">
+                <td>Inner Teaching of Taoism</td>
+                <td>Chang Po-Tuan</td>
+                <td>Taoist Alchemy</td>
+                <td><span class="status">Read</span></td>
+                <td>
+                    <span class="rate one">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                </td>
+            </tr>
+            <tr class="to-read">
+                <td>Inner Teaching of Taoism</td>
+                <td>Chang Po-Tuan</td>
+                <td>Taoist Alchemy</td>
+                <td><span class="status">To Read</span></td>
+                <td>
+                    <span class="rate">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                </td>
+            </tr>
+            <tr class="in-progress">
+                <td>Inner Teaching of Taoism</td>
+                <td>Chang Po-Tuan</td>
+                <td>Taoist Alchemy</td>
+                <td><span class="status">In Progress</span></td>
+                <td>
+                    <span class="rate">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                </td>
+            </tr>
+            <tr class="to-read">
+                <td>Inner Teaching of Taoism</td>
+                <td>Chang Po-Tuan</td>
+                <td>Taoist Alchemy</td>
+                <td><span class="status">To Read</span></td>
+                <td>
+                    <span class="rate">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                </td>
+            </tr>
+            <tr class="read">
+                <td>Inner Teaching of Taoism</td>
+                <td>Chang Po-Tuan</td>
+                <td>Taoist Alchemy</td>
+                <td><span class="status">Read</span></td>
+                <td>
+                    <span class="rate three">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                </td>
+            </tr>
+            <tr class="read">
+                <td>Inner Teaching of Taoism</td>
+                <td>Chang Po-Tuan</td>
+                <td>Taoist Alchemy</td>
+                <td><span class="status">Read</span></td>
+                <td>
+                    <span class="rate one">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

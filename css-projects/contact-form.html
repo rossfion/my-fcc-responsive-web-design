@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design a Contact Form</title>
+    <style>
+        .form-container {
+            background-color: lightgray;
+            border-radius: 5px;
+            width: 400px;
+            padding: 10px;
+        }
+
+        label {
+            margin: 0.5rem 0;
+            color: midnightblue;
+        }
+
+        input,
+        textarea {
+            width: 60%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            background-color: blue;
+            font-size: 16px;
+            color: white;
+        }
+
+        button:hover {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-container">
+        <form>
+            <h2>Message Us</h1>
+                <label for="name">Name<input type="text" id="name" name="name" required /></label>
+                <label for="email">Email<input type="email" id="email" name="email" required /></label>
+                <label for="message">Your message<textarea id="message" name="message" required></textarea></label>
+                <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>

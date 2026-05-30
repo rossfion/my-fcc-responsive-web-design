@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confidential Email Page</title>
+    <style>
+        #email {
+            box-sizing: border-box;
+            padding: 50px;
+            margin-top: 50px;
+            width: 500px;
+            border: 2px;
+        }
+
+        #confidential,
+        #top-secret {
+            display: inline-block;
+            padding: 2px;
+            margin-left: 5px;
+            border: 5px solid red;
+        }
+
+        #confidential {
+            transform: rotate(-30deg);
+        }
+
+        #top-secret {
+            transform: rotate(30deg);
+        }
+
+        .blurred {
+            filter: blur(3px);
+        }
+    </style>
+</head>
+
+<body>
+    <main id="email">
+        <div id="confidential">CONFIDENTIAL</div>
+        <div id="top-secret">TOP SECRET</div>
+        <p>Vel eligendi sint culpa. Et sed explicabo omnis deleniti. Laboriosam minima consequatur <span
+                class="blurred">tenetur quia aut</span> voluptates.</p>
+        <p>Est quaerat enim eos commodi vero. Velit adipisci temporibus atque <span class="blurred">ut quo
+                nostrum</span>. Consequatur culpa omnis dolor minima deleniti.</p>
+        <p>Aperiam autem consectetur iusto sunt. Minus et molestiae ducimus sunt. Laudantium sint debitis est. Itaque
+            <span class="blurred">rerum dolor veritatis dolores repellendus</span> eos ratione eveniet. Ut in ratione
+            quas distinctio neque aperiam impedit.</p>
+    </main>
+
+</body>
+
+</html>
